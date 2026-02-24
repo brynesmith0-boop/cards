@@ -1,0 +1,115 @@
+:root {
+    --basic-color: #7d5fff;
+    --standard-color: #2e3192;
+    --premium-color: #ed1c24;
+}
+
+body {
+    background-color: #222; /* Dark background to make cards pop */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: sans-serif;
+}
+
+.pricing-container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.pricing-card {
+    background: white;
+    width: 300px;
+    border-radius: 15px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* Header & Labels */
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.price {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.price small {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.plan-label {
+    padding: 8px 25px;
+    border-radius: 50px;
+    color: white;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+/* Color Overrides */
+.basic .plan-label, .basic .cta-btn { background: var(--basic-color); }
+.standard .plan-label, .standard .cta-btn { background: var(--standard-color); }
+.premium .plan-label, .premium .cta-btn { background: var(--premium-color); }
+
+/* Content */
+.description {
+    font-size: 0.9rem;
+    color: #444;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.features {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.features li {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 25px;
+}
+
+/* Checkmark icons using CSS pseudo-elements */
+.features li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.basic li::before { color: var(--basic-color); }
+.standard li::before { color: var(--standard-color); }
+.premium li::before { color: var(--premium-color); }
+
+/* Button */
+.cta-btn {
+    border: none;
+    padding: 12px;
+    border-radius: 50px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s;
+    margin-top: auto; /* Pushes button to bottom */
+}
+
+.cta-btn:hover {
+    transform: scale(1.03);
+    filter: brightness(1.1);
+}
