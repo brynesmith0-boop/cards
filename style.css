@@ -5,12 +5,25 @@
 }
 
 body {
-    background-color: #222; /* Dark background to make cards pop */
+    
     display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    padding-top: 200px;
     font-family: sans-serif;
+    position: relative;
+    overflow -x: hidden;
+}
+
+.background-title{
+    position:absolute;
+    top: 15%;
+    left: 20%;
+    transform: translateX(-50%);
+
 }
 
 .pricing-container {
@@ -27,27 +40,21 @@ body {
     border-radius: 15px;
     padding: 25px;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 
 /* Header & Labels */
 .card-header {
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     margin-bottom: 25px;
 }
 
-.price {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #333;
-}
 
-.price small {
-    font-size: 0.9rem;
-    color: #777;
 }
 
 .plan-label {
